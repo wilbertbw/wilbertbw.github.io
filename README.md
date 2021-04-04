@@ -1,3 +1,3 @@
 ## Welcome to Wilbert's page
 
-[Projects Here!](projects.md)
+[Check out my projects here!](projects.md)
