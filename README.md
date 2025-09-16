@@ -8,3 +8,7 @@ This repo is a clone of [https://github.com/varadbhogayata/varadbhogayata.github
 ## Activity 2
 ![Screenshot of the repo for Activity 2](./readme-images/activity_two_repo.png "Screenshot of repo for Activity 2")
 ![Screenshot of the website for Activity 2](./readme-images/activity_two_website.png "Screenshot of website for Activity 2")
+
+## Activity 3
+![Screenshot of the repo for Activity 3](./readme-images/activity_three_repo.png "Screenshot of repo for Activity 3")
+![Screenshot of the website for Activity 3](./readme-images/activity_three_website.png "Screenshot of website for Activity 3")
