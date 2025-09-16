@@ -79,7 +79,7 @@
   background-color: black;
 }
 
-/* Buttons - Read Me, Contact Us */
+/* Buttons - Read Me, Contact Us, Load More */
 
 .readme {
   position: relative;
@@ -118,6 +118,25 @@
 .contactme:hover{
   color: #0066a5;
   background-color: white;
+}
+
+.loadmore {
+  position: relative;
+  padding: 11px 35px;
+  background: #0066a5;
+  color: #fff;
+  border: 2px solid #fff;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-top: 1.5em;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+.loadmore:hover{
+  cursor: pointer;
 }
 /* main body */
 
