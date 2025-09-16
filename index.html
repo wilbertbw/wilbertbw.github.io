@@ -354,7 +354,7 @@
             const loadMoreButton = document.getElementById("loadmore");
             
             loadMoreButton.addEventListener('click', () => {
-              if (loadMoreButton.value === "Show Less") {
+              if (loadMoreButton.innerText === "Show Less") {
                 projectsContainer.innerHTML = `
                 <div class="col s12 m6 l4">
                   <div class="card medium">
@@ -390,7 +390,7 @@
                 </div>
                 `
                 numOfDisplayedProjects = 1;
-                loadMoreButton.value = "Load More";
+                loadMoreButton.innerText = "Load More";
               }
               else {
                 let i = numOfDisplayedProjects;
@@ -429,11 +429,11 @@
                   </div>
                 </div>
                 `;
-                
+
                 numOfDisplayedProjects += 1;
 
                 if (numofDisplayedProjects == 3) {
-                  loadMoreButton.value = "Show Less";
+                  loadMoreButton.innerText = "Show Less";
                 }
               }
             });
