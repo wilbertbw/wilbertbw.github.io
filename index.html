@@ -349,12 +349,51 @@
           <script>
             const projectsContainer = document.getElementById("ProjectsDisplayed");
             const allProjects = ["Real-time Chatroom", "Kidney Stone Detection", "Street-view Segmentation"];
+            let numOfDisplayedProjects = 1;
             
             const loadMoreButton = document.getElementById("loadmore");
             
             loadMoreButton.addEventListener('click', () => {
-              // loop through the projects and append the html 2 next projects (first one is already displayed)
-              for (let i = 1; i < allProjects.length; i++) {
+              if (loadMoreButton.value === "Show Less") {
+                projectsContainer.innerHTML = `
+                <div class="col s12 m6 l4">
+                  <div class="card medium">
+                    <div class="card-image waves-effect waves-block waves-light">
+                      <img alt="Real-time Chatroom Project Image" src="/assets/img/chatroom_image.png" style="height: 100%; width: 100%" class="activator" />
+                    </div>
+                    <div class="card-content">
+                      <span class="card-title activator teal-text hoverline">Real-time Chatroom<i
+                          class="mdi-navigation-more-vert right"></i></span>
+                      <p>
+                        A real-time chatroom that enables multi-user interaction in the same chat. Built with Go, React.js, and JavaScript.
+                      </p>
+                    </div>
+                    <div class="card-reveal">
+                      <!-- TODO: change this -- only close button -->
+                      <!-- <span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span> -->
+                      <span class="card-title grey-text"><small>Accomplishments</small><i
+                          class="mdi-navigation-close right"></i></span>
+                      <ul>
+                        <li><b>Tools:</b> Go, React.js, JavaScript, HTML, CSS</li>
+                        <li>Multiple users can chat together</li>
+      
+      
+                      </ul>
+                      <div class="card-action">
+                        <a aria-label="Visit the GitHub repo for  project" href="https://github.com/wilbertbw/real-time-chatroom"
+                          target="_blank" data-position="top" data-tooltip="View Source"
+                          class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+                            class="fa fa-github"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                `
+                numOfDisplayedProjects = 1;
+                loadMoreButton.value = "Load More";
+              }
+              else {
+                let i = numOfDisplayedProjects;
                 projectsContainer.innerHTML += `
                   <div class="col s12 m6 l4">
                     <div class="card medium">
@@ -389,9 +428,14 @@
                     </div>
                   </div>
                 </div>
-                `
+                `;
+                
+                numOfDisplayedProjects += 1;
+
+                if (numofDisplayedProjects == 3) {
+                  loadMoreButton.value = "Show Less";
+                }
               }
-              loadMoreButton.style.display = 'none';
             });
           </script>
         </div>
